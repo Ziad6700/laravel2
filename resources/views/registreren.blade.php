@@ -10,8 +10,8 @@
 @endsection
 
 @section('content')
-<div class="border border-black-500 w-72 w-96 h-70 mx-auto mt-32">
-    <h2 class="text-xl text-green-400 font-black mx-auto text-center"> registreren </h2>
+<div class="border border-black-500 w-72 w-96 h-96 mx-auto mt-32">
+    <h2 class="text-xl text-green-400 font-black mb-2 mx-auto text-center"> registreren </h2>
 
     <div class="flex flex-col items-center justify-center gap-5"> 
     <form action="/registreren" mehtod="POST" class="flex flex-col gap-2">
@@ -37,6 +37,8 @@
         </button>
             </form>
 
+            <p>Heb je al een acount?</p>
+            <a class="bg-blue-500  text-white font-bold py-2 px-4 rounded">login</a>
    </div>
 </div>
 @endsection
