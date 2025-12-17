@@ -7,8 +7,8 @@
 <a class="ml-10" href="/home">home</a>
 <a class="ml-10" href="/about">about</a>
 <a class="ml-10" href="/contactus">contact</a>
-<a class="ml-10" href="/posts">post</a>
-
+<a class="ml-10" href="/posts/create">post</a>
+<a class="ml-10" href="/registreren">registreren</a>
 @endsection
 
 @section('content')

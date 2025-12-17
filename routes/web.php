@@ -15,4 +15,8 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/registreren', function () {
+    return view('registreren');
+});
+
 Route::resource('posts', PostController::class);
