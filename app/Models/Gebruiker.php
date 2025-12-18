@@ -13,8 +13,8 @@ class Gebruiker extends Model
         "nummer",
     ];
 
-    public function setGebruikersnaamAttribute($value){
-        $this->attributes['gebruikersnaam'] = password_hash($value, PASSWORD_DEFAULT);
+    public function setWachtwoordAttribute($value){
+        $this->attributes['wachtwoord'] = password_hash($value, PASSWORD_DEFAULT);
     }
 
     public function checkPassword($value) : bool{

@@ -9,11 +9,7 @@ use App\Http\Controllers\LoginorregisterController;
 
 
 Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/home', function () {
-    return view('home');
+    return view('login');
 });
 
 Route::get('/registreren', function () {

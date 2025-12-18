@@ -38,7 +38,7 @@ class LoginorregisterController extends Controller
 
         $gebruiker->save();
         
-        return redirect('/home');
+        return redirect('/login');
     }
 
     /**
