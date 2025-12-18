@@ -4,11 +4,12 @@
 
 @section('header')
 <h2> laravel </h2>
-<a class="ml-10" href="/home">home</a>
-<a class="ml-10" href="/about">about</a>
-<a class="ml-10" href="/contactus">contact</a>
-<a class="ml-10" href="/posts/create">post</a>
-<a class="ml-10" href="/registreren">registreren</a>
+<a class="ml-10" href="/home">Home</a>
+<a class="ml-10" href="/about">About</a>
+<a class="ml-10" href="/contactus">Contact</a>
+<a class="ml-10" href="/posts/create">Post</a>
+<a class="ml-10" href="/registreren">Registreren</a>
+<a class="ml-10" href="/login">Inloggen</a>
 @endsection
 
 @section('content')
