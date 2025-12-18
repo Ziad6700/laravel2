@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Http\Controllers;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\LoginorregisterController;
 
 
 Route::get('/', function () {
@@ -38,3 +39,5 @@ Route::post('/login', function (Request $request) {
 });
 
 Route::resource('posts', PostController::class);
+
+Route::resource('form', LoginorregisterController::class);

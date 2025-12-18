@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Gebruiker;
 
 class LoginorregisterController extends Controller
 {
@@ -20,7 +21,7 @@ class LoginorregisterController extends Controller
      */
     public function create()
     {
-        //
+        return view('registreren');
     }
 
     /**
@@ -28,7 +29,16 @@ class LoginorregisterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $gebruiker = new Gebruiker();
+
+        $gebruiker->gebruikersnaam = $request->gebruikersnaam;
+        $gebruiker->wachtwoord = $request->wachtwoord;
+        $gebruiker->klas = $request->klas;
+        $gebruiker->nummer = $request->nummer;
+
+        $gebruiker->save();
+        
+        return redirect('/home');
     }
 
     /**

@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('loginsorregisters', function (Blueprint $table) {
+        Schema::create('gebruikers', function (Blueprint $table) {
             $table->id();
             $table->string('gebruikersnaam');
             $table->string('wachtwoord');
             $table->string('klas');
-            $table->integer('studenten nummer');
-            $table->timestamps();
+            $table->integer('nummer');
+            $table->timestamps();   
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('loginsorregisters');
+        Schema::dropIfExists('gebruikers');
     }
 };

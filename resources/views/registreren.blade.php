@@ -39,7 +39,7 @@
             Maak een account om verder te gaan.
         </p>
 
-        <form action="/registreren" method="POST" class="space-y-4">
+        <form action="/form" method="POST" class="space-y-4">
             @csrf
 
             <div class="space-y-1.5">
@@ -49,7 +49,7 @@
                 <input
                     class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                     type="text"
-                    name="username"
+                    name="gebruikersnaam"
                     placeholder="student90"
                 >
             </div>
@@ -61,7 +61,7 @@
                 <input
                     class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                     type="password"
-                    name="password"
+                    name="wachtwoord"
                     placeholder="password90"
                 >
             </div>
@@ -74,7 +74,7 @@
                     <input
                         class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                         type="number"
-                        name="studentnummer"
+                        name="nummer"
                         placeholder="902547"
                     >
                 </div>
