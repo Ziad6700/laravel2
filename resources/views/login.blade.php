@@ -100,6 +100,13 @@
                 Inloggen
             </button>
         </form>
+
+         <div class="mt-6 text-center text-sm text-gray-600">
+            <p>Heb je nog geen account?</p>
+            <a href="/registreren" class="inline-flex items-center justify-center mt-2 px-4 py-2 text-sm font-semibold text-blue-600 hover:text-blue-700 hover:underline">
+                Registreren
+            </a>
+        </div>
     </div>
 </div>
 @endsection
