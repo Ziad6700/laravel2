@@ -39,31 +39,47 @@
             Maak een account om verder te gaan.
         </p>
 
+        @if ($errors->any())
+            <div class="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                <ul class="text-sm text-red-600 space-y-1">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <form action="/form" method="POST" class="space-y-4">
             @csrf
 
             <div class="space-y-1.5">
                 <label class="block text-sm font-medium text-gray-700">
-                    Kies een gebruikersnaam
+                    Naam
                 </label>
                 <input
-                    class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                    class="block w-full bg-gray-50 border {{ $errors->has('gebruikersnaam') ? 'border-red-300' : 'border-gray-300' }} rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                     type="text"
                     name="gebruikersnaam"
+                    value="{{ old('gebruikersnaam') }}"
                     placeholder="student90"
+                    required
                 >
             </div>
 
             <div class="space-y-1.5">
                 <label class="block text-sm font-medium text-gray-700">
-                    Kies een wachtwoord
+                    Wachtwoord
                 </label>
                 <input
-                    class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                    class="block w-full bg-gray-50 border {{ $errors->has('wachtwoord') ? 'border-red-300' : 'border-gray-300' }} rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                     type="password"
                     name="wachtwoord"
                     placeholder="password90"
+                    required
                 >
+                @if($errors->has('wachtwoord'))
+                    <p class="text-xs text-red-600 mt-1">Wachtwoord moet minimaal 6 tekens lang zijn.</p>
+                @endif
             </div>
 
             <div class="grid grid-cols-2 gap-4 mt-2">
@@ -72,10 +88,12 @@
                         Studentnummer
                     </label>
                     <input
-                        class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                        class="block w-full bg-gray-50 border {{ $errors->has('nummer') ? 'border-red-300' : 'border-gray-300' }} rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                         type="number"
                         name="nummer"
+                        value="{{ old('nummer') }}"
                         placeholder="902547"
+                        required
                     >
                 </div>
 
@@ -84,10 +102,12 @@
                         Klas
                     </label>
                     <input
-                        class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                        class="block w-full bg-gray-50 border {{ $errors->has('klas') ? 'border-red-300' : 'border-gray-300' }} rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                         type="text"
                         name="klas"
+                        value="{{ old('klas') }}"
                         placeholder="1MB"
+                        required
                     >
                 </div>
             </div>

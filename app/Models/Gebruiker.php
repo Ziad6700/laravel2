@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
 
 class Gebruiker extends Model
 {
+    protected $table = 'gebruikers';
+    
     protected $fillable = [
         "gebruikersnaam",
         "wachtwoord",
@@ -13,11 +16,15 @@ class Gebruiker extends Model
         "nummer",
     ];
 
-    public function setGebruikersnaamAttribute($value){
-        $this->attributes['gebruikersnaam'] = password_hash($value, PASSWORD_DEFAULT);
+    protected $hidden = [
+        'wachtwoord',
+    ];
+
+    public function setWachtwoordAttribute($value){
+        $this->attributes['wachtwoord'] = Hash::make($value);
     }
 
     public function checkPassword($value) : bool{
-        //todo;
+        return Hash::check($value, $this->wachtwoord);
     }
 }
