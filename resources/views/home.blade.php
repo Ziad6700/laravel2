@@ -63,18 +63,6 @@
             <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 text-center">
                 <h1 class="text-3xl font-extrabold text-green-600 mb-4">
                     Welkom bij het Student Portaal
-                </h1>
-                <p class="text-gray-600 mb-6">
-                    Log in of registreer om verder te gaan.
-                </p>
-                <div class="flex gap-4 justify-center">
-                    <a href="/login" class="inline-flex items-center justify-center font-semibold text-white bg-green-600 hover:bg-green-700 h-12 px-6 rounded-lg shadow-md transition-colors duration-200">
-                        Inloggen
-                    </a>
-                    <a href="/registreren" class="inline-flex items-center justify-center font-semibold text-green-600 bg-white border-2 border-green-600 hover:bg-green-50 h-12 px-6 rounded-lg shadow-md transition-colors duration-200">
-                        Registreren
-                    </a>
-                </div>
             </div>
         @endif
     </div>
