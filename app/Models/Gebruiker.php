@@ -18,6 +18,8 @@ class Gebruiker extends Model
 
     public function setWachtwoordAttribute($value){
         $this->attributes['wachtwoord'] = password_hash($value, PASSWORD_DEFAULT);
+    }
+    
     protected $hidden = [
         'wachtwoord',
     ];
