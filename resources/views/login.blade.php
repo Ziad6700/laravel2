@@ -39,18 +39,36 @@
             Log in om verder te gaan.
         </p>
 
+        @if ($errors->any())
+            <div class="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                <p class="text-sm text-red-600">
+                    {{ $errors->first('username') }}
+                </p>
+            </div>
+        @endif
+
+        @if (session('success'))
+            <div class="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+                <p class="text-sm text-green-600">
+                    {{ session('success') }}
+                </p>
+            </div>
+        @endif
+
         <form action="/login" method="POST" class="space-y-4">
             @csrf
 
             <div class="space-y-1.5">
                 <label class="block text-sm font-medium text-gray-700">
-                    Gebruikersnaam
+                    Naam
                 </label>
                 <input
-                    class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                    class="block w-full bg-gray-50 border {{ $errors->has('username') ? 'border-red-300' : 'border-gray-300' }} rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                     type="text"
                     name="username"
+                    value="{{ old('username') }}"
                     placeholder="student90"
+                    required
                 >
             </div>
 
@@ -59,37 +77,12 @@
                     Wachtwoord
                 </label>
                 <input
-                    class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                    class="block w-full bg-gray-50 border {{ $errors->has('password') ? 'border-red-300' : 'border-gray-300' }} rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                     type="password"
                     name="password"
                     placeholder="password90"
+                    required
                 >
-            </div>
-
-            <div class="grid grid-cols-2 gap-4 mt-2">
-                <div class="space-y-1.5">
-                    <label class="block text-sm font-medium text-gray-700">
-                        Studentnummer
-                    </label>
-                    <input
-                        class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
-                        type="number"
-                        name="studentnummer"
-                        placeholder="902547"
-                    >
-                </div>
-
-                <div class="space-y-1.5">
-                    <label class="block text-sm font-medium text-gray-700">
-                        Klas
-                    </label>
-                    <input
-                        class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
-                        type="text"
-                        name="klas"
-                        placeholder="1MB"
-                    >
-                </div>
             </div>
 
             <button

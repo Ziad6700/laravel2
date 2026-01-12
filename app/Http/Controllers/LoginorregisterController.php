@@ -29,16 +29,22 @@ class LoginorregisterController extends Controller
      */
     public function store(Request $request)
     {
-        $gebruiker = new Gebruiker();
+        $validated = $request->validate([
+            'gebruikersnaam' => 'required|string|max:255|unique:gebruikers,gebruikersnaam',
+            'wachtwoord' => 'required|string|min:6',
+            'klas' => 'required|string|max:50',
+            'nummer' => 'required|integer',
+        ]);
 
-        $gebruiker->gebruikersnaam = $request->gebruikersnaam;
-        $gebruiker->wachtwoord = $request->wachtwoord;
-        $gebruiker->klas = $request->klas;
-        $gebruiker->nummer = $request->nummer;
+        $gebruiker = new Gebruiker();
+        $gebruiker->gebruikersnaam = $validated['gebruikersnaam'];
+        $gebruiker->wachtwoord = $validated['wachtwoord']; // Automatically hashed by mutator
+        $gebruiker->klas = $validated['klas'];
+        $gebruiker->nummer = $validated['nummer'];
 
         $gebruiker->save();
         
-        return redirect('/login');
+        return redirect('/home')->with('success', 'Registratie succesvol! Je kunt nu inloggen.');
     }
 
     /**
