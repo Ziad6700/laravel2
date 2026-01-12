@@ -21,7 +21,7 @@
         <!-- Rechts: navigatie-links met button styling -->
         <nav class="flex items-center ml-auto space-x-6 text-xs sm:text-sm">
             @if(session('logged_in'))
-                <span class="text-white font-medium">Welkom, {{ session('username') }}!</span>
+                <span class="text-white font-medium">{{ session('username') }}</span>
                 <form action="{{ route('logout') }}" method="POST" class="inline">
                     @csrf
                     <button type="submit" class="inline-flex items-center justify-center font-semibold text-emerald-700 bg-white h-9 sm:h-10 px-4 sm:px-6 rounded-full shadow-md hover:bg-emerald-50 hover:text-emerald-800 transition-all duration-200">
@@ -51,7 +51,7 @@
         @if (session('logged_in'))
             <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
                 <h1 class="text-3xl font-extrabold text-green-600 mb-4">
-                    Welkom terug, {{ session('username') }}!
+                Welkom terug, {{ session('username') }}!
                 </h1>
                 <div class="space-y-3 text-gray-700">
                     <p><span class="font-semibold">Naam:</span> {{ session('username') }}</p>

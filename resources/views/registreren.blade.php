@@ -92,7 +92,7 @@
                         type="number"
                         name="nummer"
                         value="{{ old('nummer') }}"
-                        placeholder="902547"
+                        placeholder="902..."
                         required
                     >
                 </div>
