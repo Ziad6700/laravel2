@@ -16,12 +16,14 @@ class Gebruiker extends Model
         "nummer",
     ];
 
+    public function setWachtwoordAttribute($value){
+        $this->attributes['wachtwoord'] = password_hash($value, PASSWORD_DEFAULT);
+    }
+    
     protected $hidden = [
         'wachtwoord',
     ];
 
-    public function setWachtwoordAttribute($value){
-        $this->attributes['wachtwoord'] = Hash::make($value);
     }
 
     public function checkPassword($value) : bool{
