@@ -24,8 +24,6 @@ class Gebruiker extends Model
         'wachtwoord',
     ];
 
-    }
-
     public function checkPassword($value) : bool{
         return Hash::check($value, $this->wachtwoord);
     }

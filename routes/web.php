@@ -10,7 +10,15 @@ use App\Http\Controllers\LoginController;
 
 
 Route::get('/', function () {
-    return view('login');
+    return view('home');
+});
+
+Route::get('/home' , function () {
+    return view('home');
+});
+
+Route::get('/home', function () {
+    return view('home');
 });
 
 Route::get('/registreren', function () {
