@@ -36,3 +36,7 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::resource('posts', PostController::class);
 
 Route::resource('form', LoginorregisterController::class);
+
+Route::get('/account', function () {
+    return view('account');
+});
