@@ -5,7 +5,7 @@
 @section('bodyClass', 'bg-backwhite-white-600')
 
 @section('header')
-<header class="bg-gradient-to-r from-emerald-700 via-green-600 to-emerald-700 shadow-lg">
+<header class="bg-emerald-700 shadow-lg">
     <div class="w-full flex flex-row items-center justify-between h-24 px-4 sm:px-8">
     
         <div class="flex items-center gap-3">
@@ -18,7 +18,6 @@
                     Student Portaal
                 </span>
             </div>
-             <img class="h-24 w-84 ml-44 mb-1.5 brightness-100" src="{{ asset('images/slogantcr.png') }}" alt="Techniek College Rotterdam slogan"> 
         </div>
 
         <nav class="flex items-center ml-auto text-sm">
