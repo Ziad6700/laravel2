@@ -3,7 +3,7 @@
 @section('title', 'Home')
 
 @section('header')
-<header class="bg-gradient-to-r from-emerald-700 to-emerald-700 shadow-lg">
+<header class="bg-emerald-700 shadow-lg">
     <div class="w-full flex flex-row items-center justify-between h-24 px-4 sm:px-8">
     
         <div class="flex items-center gap-3">
