@@ -21,6 +21,13 @@
              <img class="h-24 w-84 ml-44 mb-1.5 brightness-100" src="{{ asset('images/slogantcr.png') }}" alt="Techniek College Rotterdam slogan"> 
         </div>
 
+        <nav class="flex items-center ml-auto text-sm">
+            <a class="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-emerald-700 bg-white h-10 sm:h-10 px-4 sm:px-6 rounded-full shadow-md hover:bg-emerald-50 hover:text-emerald-800 transition-all duration-200"
+               href="/home">
+                <span class="mr-1.5 text-base">←</span>
+                <span>Home</span>
+            </a>
+        </nav>
     </div>
 </header>
 @endsection
@@ -59,7 +66,7 @@
                     Naam
                 </label>
                 <input
-                    class="block w-full bg-gray-50 border {{ $errors->has('username') ? 'border-red-300' : 'border-gray-300' }} rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                    class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-formHover-green-600 focus:border-formHover-green-600"
                     type="text"
                     name="username"
                     value="{{ old('username') }}"
@@ -73,7 +80,7 @@
                     Wachtwoord
                 </label>
                 <input
-                    class="block w-full bg-gray-50 border {{ $errors->has('password') ? 'border-red-300' : 'border-gray-300' }} rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                     class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-formHover-green-600 focus:border-formHover-green-600"
                     type="password"
                     name="password"
                     placeholder="password90"

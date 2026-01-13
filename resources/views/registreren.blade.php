@@ -3,10 +3,10 @@
 @section('title', 'Home')
 
 @section('header')
-<header class="bg-gradient-to-r from-emerald-600 via-green-600 to-emerald-700 shadow-lg">
-    <div class="w-full flex flex-row items-center justify-between h-20 px-4 sm:px-8">
-        
-        <div class="flex items-center gap-3 sm:gap-3">
+<header class="bg-gradient-to-r from-emerald-700 via-green-600 to-emerald-700 shadow-lg">
+    <div class="w-full flex flex-row items-center justify-between h-24 px-4 sm:px-8">
+    
+        <div class="flex items-center gap-3">
             <img class="h-9 sm:h-10 w-auto" src="{{ asset('images/techniek-college-rotterdam.webp') }}" alt="Techniek College Rotterdam logo"> 
             <div class="flex flex-col gap-0.5 leading-tight">
                 <span class="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-emerald-100 font-semibold">
@@ -16,6 +16,7 @@
                     Student Portaal
                 </span>
             </div>
+             <img class="h-24 w-84 ml-44 mb-1.5 brightness-100" src="{{ asset('images/slogantcr.png') }}" alt="Techniek College Rotterdam slogan"> 
         </div>
 
         <nav class="flex items-center ml-auto text-sm">
@@ -30,9 +31,9 @@
 @endsection
 
 @section('content')
-<div class="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-br from-gray-50 via-green-50 to-white py-10">
+<div class="min-h-[calc(100vh-4rem)] flex items-center justify-center py-10">
     <div class="w-full max-w-md bg-white rounded-2xl shadow-xl border border-gray-100 px-8 py-8">
-        <h2 class="text-2xl font-extrabold text-center text-green-600 mb-1 tracking-tight">
+        <h2 class="text-2xl font-extrabold text-center text-green-950 mb-1 tracking-tight">
             Registreren
         </h2>
         <p class="text-center text-gray-500 text-sm mb-6">
@@ -57,7 +58,7 @@
                     Naam
                 </label>
                 <input
-                    class="block w-full bg-gray-50 border {{ $errors->has('gebruikersnaam') ? 'border-red-300' : 'border-gray-300' }} rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                    class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-formHover-green-600 focus:border-formHover-green-600"
                     type="text"
                     name="gebruikersnaam"
                     value="{{ old('gebruikersnaam') }}"
@@ -66,12 +67,12 @@
                 >
             </div>
 
-            <div class="space-y-1.5">
+                <div class="space-y-1.5">
                 <label class="block text-sm font-medium text-gray-700">
                     Wachtwoord
                 </label>
                 <input
-                    class="block w-full bg-gray-50 border {{ $errors->has('wachtwoord') ? 'border-red-300' : 'border-gray-300' }} rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                    class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-formHover-green-600 focus:border-formHover-green-600"
                     type="password"
                     name="wachtwoord"
                     placeholder="password90"
@@ -88,7 +89,7 @@
                         Studentnummer
                     </label>
                     <input
-                        class="block w-full bg-gray-50 border {{ $errors->has('nummer') ? 'border-red-300' : 'border-gray-300' }} rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                        class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-formHover-green-600 focus:border-formHover-green-600"
                         type="number"
                         name="nummer"
                         value="{{ old('nummer') }}"
@@ -102,7 +103,7 @@
                         Klas
                     </label>
                     <input
-                        class="block w-full bg-gray-50 border {{ $errors->has('klas') ? 'border-red-300' : 'border-gray-300' }} rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                        class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-formHover-green-600 focus:border-formHover-green-600" 
                         type="text"
                         name="klas"
                         value="{{ old('klas') }}"
@@ -112,17 +113,14 @@
                 </div>
             </div>
 
-            <button
-                type="submit"
-                class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold mt-4 py-2.5 rounded-lg shadow-sm transition-colors duration-200"
-            >
+               <button type="submit" class="w-full bg-login-green-600 text-black font-bold mt-4 py-2.5 rounded-lg shadow-sm">
                 Registreren
             </button>
         </form>
 
         <div class="mt-6 text-center text-sm text-gray-600">
             <p>Heb je al een account?</p>
-            <a href="/login" class="inline-flex items-center justify-center mt-2 px-4 py-2 text-sm font-semibold text-blue-600 hover:text-blue-700 hover:underline">
+            <a href="/login"  class="inline-flex items-center justify-center w-full h-12 mt-2 px-4 py-2 text-sm font-bold bg-sign-green-800 text-white rounded-lg hover:bg-hoverSign-green-800 ">
                 Inloggen
             </a>
         </div>
