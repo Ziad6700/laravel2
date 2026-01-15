@@ -7,7 +7,7 @@
 
      @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body class="bg-green-50">
 <header class="bg-emerald-700 shadow-lg">
     <div class="w-full flex flex-row items-center justify-between h-20 px-4 sm:px-8">
         <!-- Links: logo + titel strak links -->
