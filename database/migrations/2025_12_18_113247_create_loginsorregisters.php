@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('wachtwoord');
             $table->string('klas');
             $table->integer('nummer');
+            $table->string('rol');
             $table->timestamps();   
         });
     }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Gebruiker;
+use App\Models\User;
 
 class LoginorregisterController extends Controller
 {
@@ -32,8 +33,8 @@ class LoginorregisterController extends Controller
         $validated = $request->validate([
             'gebruikersnaam' => 'required|string|max:255|unique:gebruikers,gebruikersnaam',
             'wachtwoord' => 'required|string|min:6',
-            'klas' => 'required|string|max:50',
-            'nummer' => 'required|integer',
+            'klas' => 'required|string|size:3',
+            'nummer' => 'required|integer|digits:7',
         ]);
 
         $gebruiker = new Gebruiker();
@@ -41,6 +42,7 @@ class LoginorregisterController extends Controller
         $gebruiker->wachtwoord = $validated['wachtwoord']; // Automatically hashed by mutator
         $gebruiker->klas = $validated['klas'];
         $gebruiker->nummer = $validated['nummer'];
+        $gebruiker->rol = 'student';
 
         $gebruiker->save();
         

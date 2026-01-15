@@ -9,17 +9,16 @@ use App\Http\Controllers\LoginorregisterController;
 use App\Http\Controllers\LoginController;
 
 
+
 Route::get('/', function () {
     return view('home');
 });
 
 Route::get('/home' , function () {
-    return view('home');
+    $rol = session("rol");
+    return view('home', ["rol" => $rol]);
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
 
 Route::get('/registreren', function () {
     return view('registreren');

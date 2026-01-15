@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Gebruiker;
 use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -38,8 +39,10 @@ class LoginController extends Controller
                 'username' => $gebruiker->gebruikersnaam,
                 'klas' => $gebruiker->klas,
                 'nummer' => $gebruiker->nummer,
-                'logged_in' => true
+                'logged_in' => true,
+                'rol' => $gebruiker->rol,
             ]);
+
 
             return redirect('/home')->with('success', 'Login succesvol! Welkom ' . $gebruiker->gebruikersnaam);
         }

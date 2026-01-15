@@ -14,6 +14,7 @@ class Gebruiker extends Model
         "wachtwoord",
         "klas",
         "nummer",
+        "rol",
     ];
 
     public function setWachtwoordAttribute($value){
