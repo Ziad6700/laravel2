@@ -2,8 +2,7 @@
 
 @section('title', 'Home')
 
-@section('content')
-<div class="min-h-[calc(100vh-4rem)] bg-green-50">
+@section('content')>
     @if (session('success'))
         <div class="w-full max-w-6xl mx-auto px-4 pt-8">
             <div class="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg shadow-sm">
@@ -90,9 +89,9 @@
             <h2 class="text-2xl sm:text-3xl font-bold text-emerald-700 mb-6 text-center">
                 Waarom het Student Portaal gebruiken?
             </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div class="flex items-start gap-4">
-                    <div class="flex-shrink-0 w-6 h-6 bg-emerald-600 rounded-full mt-1 flex items-center justify-center">
+            <div class=" grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="flex flex-col items-center text-center gap-4">
+                    <div class="flex-shrink-0 w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center">
                         <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
@@ -102,8 +101,8 @@
                         <p class="text-gray-700 text-sm">Alle keuzedelen en extra vakken op één plek.</p>
                     </div>
                 </div>
-                <div class="flex items-start gap-4">
-                    <div class="flex-shrink-0 w-6 h-6 bg-emerald-600 rounded-full mt-1 flex items-center justify-center">
+                <div class="flex flex-col items-center text-center gap-4">
+                    <div class="flex-shrink-0 w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center">
                         <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
@@ -113,8 +112,8 @@
                         <p class="text-gray-700 text-sm">Uitgebreide beschrijvingen en leerdoelen per vak.</p>
                     </div>
                 </div>
-                <div class="flex items-start gap-4">
-                    <div class="flex-shrink-0 w-6 h-6 bg-emerald-600 rounded-full mt-1 flex items-center justify-center">
+                <div class="flex flex-col items-center text-center gap-4">
+                    <div class="flex-shrink-0 w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center">
                         <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
@@ -124,8 +123,8 @@
                         <p class="text-gray-700 text-sm">Meld je snel en eenvoudig aan voor je keuze.</p>
                     </div>
                 </div>
-                <div class="flex items-start gap-4">
-                    <div class="flex-shrink-0 w-6 h-6 bg-emerald-600 rounded-full mt-1 flex items-center justify-center">
+                <div class="flex flex-col items-center text-center gap-4">
+                    <div class="flex-shrink-0 w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center">
                         <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
