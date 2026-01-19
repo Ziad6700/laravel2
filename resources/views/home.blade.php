@@ -147,7 +147,7 @@
             <p class="text-gray-700 mb-6 text-lg">
                 Bekijk alle beschikbare keuzedelen en extra vakken en maak je keuze.
             </p>
-            @if($rol === 'student')
+            @if($rol === 'student' || $rol === 'admin') 
                 <a href="#" class="inline-flex items-center justify-center font-semibold text-white bg-emerald-700 h-12 px-8 rounded-full shadow-md hover:bg-emerald-800 transition-all duration-200 text-base">
                     Bekijk keuzedelen en extra vakken
                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

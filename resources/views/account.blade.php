@@ -12,6 +12,7 @@
                     <p><span class="font-semibold">Naam:</span> {{ session('username') }}</p>
                     <p><span class="font-semibold">Klas:</span> {{ session('klas') }}</p>
                     <p><span class="font-semibold">Studentnummer:</span> {{ session('nummer') }}</p>
+                    <p><span class="font-semibold">Rol:</span> {{ session('rol') }}</p>
                 </div>
             </div>
  @endif

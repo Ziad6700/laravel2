@@ -75,9 +75,11 @@
             </div>
 
             <div class="space-y-1.5">
+            <div class="flex flex-row">
                 <label class="block text-sm font-medium text-gray-700">
                     Wachtwoord
                 </label>
+            </div>
                 <input
                      class="block w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-formHover-green-600 focus:border-formHover-green-600"
                     type="password"
