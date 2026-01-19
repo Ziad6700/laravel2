@@ -32,14 +32,14 @@ class LoginorregisterController extends Controller
     {
         $validated = $request->validate([
             'gebruikersnaam' => 'required|string|max:255|unique:gebruikers,gebruikersnaam',
-            'wachtwoord' => 'required|string|min:6',
+            'password' => 'required|string|min:6',
             'klas' => 'required|string|size:3',
             'nummer' => 'required|integer|digits:7',
         ]);
 
         $gebruiker = new Gebruiker();
         $gebruiker->gebruikersnaam = $validated['gebruikersnaam'];
-        $gebruiker->wachtwoord = $validated['wachtwoord']; // Automatically hashed by mutator
+        $gebruiker->wachtwoord = $validated['password']; // Automatically hashed by mutator
         $gebruiker->klas = $validated['klas'];
         $gebruiker->nummer = $validated['nummer'];
         $gebruiker->rol = 'student';

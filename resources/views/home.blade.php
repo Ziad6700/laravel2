@@ -2,7 +2,7 @@
 
 @section('title', 'Home')
 
-@section('content')>
+@section('content')
     @if (session('success'))
         <div class="w-full max-w-6xl mx-auto px-4 pt-8">
             <div class="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg shadow-sm">
@@ -147,7 +147,7 @@
             <p class="text-gray-700 mb-6 text-lg">
                 Bekijk alle beschikbare keuzedelen en extra vakken en maak je keuze.
             </p>
-            @if(session('logged_in'))
+            @if($rol === 'student')
                 <a href="#" class="inline-flex items-center justify-center font-semibold text-white bg-emerald-700 h-12 px-8 rounded-full shadow-md hover:bg-emerald-800 transition-all duration-200 text-base">
                     Bekijk keuzedelen en extra vakken
                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

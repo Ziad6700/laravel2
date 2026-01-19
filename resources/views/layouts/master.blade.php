@@ -25,7 +25,7 @@
 
         <!-- Rechts: navigatie-links met button styling -->
         <nav class="flex items-center ml-auto space-x-6 text-xs sm:text-sm">
-            @if(session('logged_in'))
+            @if(($rol === 'student'))
                 <a href="/" class="text-white font-medium hover:text-emerald-100 transition-colors duration-200">Home</a>
                 <a href="account" class="text-white font-medium" style="margin: 0px 24px 0px 0px;">Account</a>
                 <form action="{{ route('logout') }}" method="POST" class="inline">
@@ -34,7 +34,17 @@
                         Uitloggen
                     </button>
                 </form>
-            @else
+            @elseif(($rol === 'admin'))
+            <a href="/" class="text-white font-medium hover:text-emerald-100 transition-colors duration-200">Home</a>
+                <a href="account" class="text-white font-medium" style="margin: 0px 24px 0px 0px;">Account</a>
+                <a href="admin" class="text-white font-medium" style="margin: 0px 24px 0px 0px;">Admin</a>
+                <form action="{{ route('logout') }}" method="POST" class="inline">
+                    @csrf
+                    <button type="submit" class="inline-flex items-center justify-center font-semibold text-emerald-700 bg-white h-9 sm:h-10 px-4 sm:px-6 rounded-full shadow-md hover:bg-emerald-50 hover:text-emerald-800 transition-all duration-200">
+                        Uitloggen
+                    </button>
+                </form>
+                @elseif(($rol !== 'admin'&& $rol !== 'student'))
                 <a class="inline-flex items-center justify-center font-semibold text-emerald-700 bg-white h-9 sm:h-10 px-4 sm:px-6 rounded-full shadow-md hover:bg-emerald-50 hover:text-emerald-800 transition-all duration-200" href="/registreren">Registreren</a>
                 <a class="inline-flex items-center justify-center font-semibold text-emerald-700 bg-white h-9 sm:h-10 px-4 sm:px-6 rounded-full shadow-md hover:bg-emerald-50 hover:text-emerald-800 transition-all duration-200" href="/login">Inloggen</a>
             @endif

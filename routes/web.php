@@ -9,16 +9,21 @@ use App\Http\Controllers\LoginorregisterController;
 use App\Http\Controllers\LoginController;
 
 
-
 Route::get('/', function () {
     return view('home');
 });
 
 Route::get('/home' , function () {
-    $rol = session("rol");
-    return view('home', ["rol" => $rol]);
+    return view('home');
 });
 
+Route::get('/admin', function () {
+    if (session('rol') !== 'admin') {
+        return redirect('/home')->with('fout', 'Je hebt geen toegang.');
+    }
+
+    return view('admin');
+});
 
 Route::get('/registreren', function () {
     return view('registreren');
