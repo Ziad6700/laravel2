@@ -15,9 +15,11 @@ Route::get('/', function () {
 
 Route::get('/home' , function () {
     return view('home');
-});
+}); 
 
-Route::get('/admin', [LoginorregisterController::class, 'index']); 
+Route::get('/keuzedelen' , function () {
+    return view('keuzedelen');
+}); 
 
 Route::get('/registreren', function () {
     return view('registreren');

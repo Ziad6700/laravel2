@@ -28,6 +28,7 @@
             @if(($rol === 'student'))
                 <a href="/" class="text-white font-medium hover:text-emerald-100 transition-colors duration-200">Home</a>
                 <a href="account" class="text-white font-medium" style="margin: 0px 24px 0px 0px;">Account</a>
+                <a href="keuzedelen" class="text-white font-medium hover:text-emerald-100 transition-colors duration-200" style="margin: 0px 24px 0px 0px;">Keuzedelen</a>
                 <form action="{{ route('logout') }}" method="POST" class="inline">
                     @csrf
                     <button type="submit" class="inline-flex items-center justify-center font-semibold text-emerald-700 bg-white h-9 sm:h-10 px-4 sm:px-6 rounded-full shadow-md hover:bg-emerald-50 hover:text-emerald-800 transition-all duration-200">
@@ -36,6 +37,7 @@
                 </form>
             @elseif(($rol === 'admin'))
             <a href="/" class="text-white font-medium hover:text-emerald-100 transition-colors duration-200">Home</a>
+            <a href="keuzedelen" class="text-white font-medium hover:text-emerald-100 transition-colors duration-200" style="margin: 0px 24px 0px 0px;">Keuzedelen</a>
                 <a href="account" class="text-white font-medium hover:text-emerald-100 transition-colors duration-200" style="margin: 0px 24px 0px 0px;">Account</a>
                 <a href="admin" class="text-white font-medium hover:text-emerald-100 transition-colors duration-200" style="margin: 0px 24px 0px 0px;">Account management</a>
                 <form action="{{ route('logout') }}" method="POST" class="inline">

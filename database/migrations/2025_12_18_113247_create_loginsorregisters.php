@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('klas');
             $table->integer('nummer');
             $table->string('rol');
+            $table->foreignId('keuzendeel')->nullable()->constrained('keuzedelen')->onDelete('cascade');
             $table->timestamps();   
         });
     }
