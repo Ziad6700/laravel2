@@ -14,8 +14,13 @@ class LoginorregisterController extends Controller
      */
     public function index()
     {
-        //
+        if (session('rol') !== 'admin') {
+            return redirect('/home')->with('fout', 'Je hebt geen toegang.');
+        }
+        $gebruikers = Gebruiker::all();
+        return view('admin', compact('gebruikers')); 
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -79,5 +84,18 @@ class LoginorregisterController extends Controller
     public function destroy(string $id)
     {
         //
+        if (session('rol') !== 'admin') {
+            return redirect('/home')->with('fout', 'Je hebt geen toegang.');
+        }
+    
+
+    $gebruiker = Gebruiker::find($id);
+
+      if ($gebruiker) {
+        $gebruiker->delete();
+        return redirect()->back()->with('success', 'Gebruiker is succesvol verwijderd.');
     }
+
+    return redirect()->back()->with('fout', 'Gebruiker kon niet gevonden worden.');
+  }
 }

@@ -17,13 +17,7 @@ Route::get('/home' , function () {
     return view('home');
 });
 
-Route::get('/admin', function () {
-    if (session('rol') !== 'admin') {
-        return redirect('/home')->with('fout', 'Je hebt geen toegang.');
-    }
-
-    return view('admin');
-});
+Route::get('/admin', [LoginorregisterController::class, 'index']); 
 
 Route::get('/registreren', function () {
     return view('registreren');
@@ -40,6 +34,11 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::resource('posts', PostController::class);
 
 Route::resource('form', LoginorregisterController::class);
+
+Route::get('/admin', [LoginorregisterController::class, 'index']);
+
+Route::delete('/gebruikers/{id}', [LoginorregisterController::class, 'destroy'])->name('gebruikers.destroy');
+
 
 Route::get('/account', function () {
     return view('account');

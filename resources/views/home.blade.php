@@ -4,9 +4,9 @@
 
 @section('content')
     @if (session('success'))
-        <div class="w-full max-w-6xl mx-auto px-4 pt-8">
+        <div class="w-full max-w-xl mx-auto px-4 pt-8">
             <div class="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg shadow-sm">
-                <p class="text-sm text-green-600 font-medium">
+                <p class="text-sm text-center text-green-600 font-medium">
                     {{ session('success') }}
                 </p>
             </div>
