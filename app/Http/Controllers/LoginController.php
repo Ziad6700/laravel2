@@ -41,6 +41,7 @@ class LoginController extends Controller
                 'nummer' => $gebruiker->nummer,
                 'logged_in' => true,
                 'rol' => $gebruiker->rol,
+                'keuzendeel_naam' => $gebruiker->keuzendeel_naam,
             ]);
 
 

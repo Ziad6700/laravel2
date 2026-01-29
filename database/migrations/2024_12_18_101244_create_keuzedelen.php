@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('keuzedelen', function (Blueprint $table) {
             $table->id();
-            $table->string('naam');
+            $table->string('naam')->unique();
+            $table->text('description');
+            $table->string('keuzedeel_code', 20);
+            $table->timestamps();  
         });
     }
 

@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('klas');
             $table->integer('nummer');
             $table->string('rol');
-            $table->foreignId('keuzendeel')->nullable()->constrained('keuzedelen')->onDelete('cascade');
+            $table->string('keuzendeel_naam')->nullable();
+            $table->foreign('keuzendeel_naam')->references('naam')->on('keuzedelen')->onDelete('cascade'); 
             $table->timestamps();   
         });
     }

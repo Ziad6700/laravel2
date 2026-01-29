@@ -54,6 +54,7 @@ class LoginorregisterController extends Controller
         return redirect('/home')->with('success', 'Registratie succesvol! Je kunt nu inloggen.');
     }
 
+
     /**
      * Display the specified resource.
      */

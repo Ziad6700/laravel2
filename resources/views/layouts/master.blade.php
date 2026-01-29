@@ -7,7 +7,7 @@
 
      @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-green-50">
+<body class="bg-green-100">
 <header class="bg-emerald-700 shadow-lg">
     <div class="w-full flex flex-row items-center justify-between h-20 px-4 sm:px-8">
         <!-- Links: logo + titel strak links -->
@@ -38,6 +38,7 @@
             @elseif(($rol === 'admin'))
             <a href="/" class="text-white font-medium hover:text-emerald-100 transition-colors duration-200">Home</a>
             <a href="keuzedelen" class="text-white font-medium hover:text-emerald-100 transition-colors duration-200" style="margin: 0px 24px 0px 0px;">Keuzedelen</a>
+            <a href="creëren" class="text-white font-medium hover:text-emerald-100 transition-colors duration-200" style="margin: 0px 24px 0px 0px;">creëren</a>
                 <a href="account" class="text-white font-medium hover:text-emerald-100 transition-colors duration-200" style="margin: 0px 24px 0px 0px;">Account</a>
                 <a href="admin" class="text-white font-medium hover:text-emerald-100 transition-colors duration-200" style="margin: 0px 24px 0px 0px;">Account management</a>
                 <form action="{{ route('logout') }}" method="POST" class="inline">

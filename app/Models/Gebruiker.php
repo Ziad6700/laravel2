@@ -15,6 +15,7 @@ class Gebruiker extends Model
         "klas",
         "nummer",
         "rol",
+        'keuzendeel_naam',
     ];
 
     public function setWachtwoordAttribute($value){
@@ -28,4 +29,9 @@ class Gebruiker extends Model
     public function checkPassword($value) : bool{
         return Hash::check($value, $this->wachtwoord);
     }
+
+    public function keuzendeel()
+{
+    return $this->belongsTo(keuzedeel::class, 'keuzendeel_naam', 'naam');
+}
 }
