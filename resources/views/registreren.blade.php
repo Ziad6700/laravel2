@@ -2,33 +2,6 @@
 
 @section('title', 'Home')
 
-@section('header')
-<header class="bg-emerald-700 shadow-lg">
-    <div class="w-full flex flex-row items-center justify-between h-24 px-4 sm:px-8">
-    
-        <div class="flex items-center gap-3">
-            <img class="h-9 sm:h-10 w-auto" src="{{ asset('images/techniek-college-rotterdam.webp') }}" alt="Techniek College Rotterdam logo"> 
-            <div class="flex flex-col gap-0.5 leading-tight">
-                <span class="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-emerald-100 font-semibold">
-                    Techniek College Rotterdam
-                </span>
-                <span class="text-lg sm:text-xl font-semibold text-white">
-                    Student Portaal
-                </span>
-            </div>
-        </div>
-
-        <nav class="flex items-center ml-auto text-sm">
-            <a class="inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-emerald-700 bg-white h-9 sm:h-10 px-4 sm:px-6 rounded-full shadow-md hover:bg-emerald-50 hover:text-emerald-800 transition-all duration-200"
-               href="/home">
-                <span class="mr-1.5 text-base">←</span>
-                <span>Home</span>
-            </a>
-        </nav>
-    </div>
-</header>
-@endsection
-
 @section('content')
 <div class="min-h-[calc(100vh-4rem)] flex items-center justify-center py-10">
     <div class="w-full max-w-md bg-white rounded-2xl shadow-xl border border-gray-100 px-8 py-8">
