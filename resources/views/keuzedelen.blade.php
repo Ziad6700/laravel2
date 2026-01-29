@@ -5,7 +5,7 @@
 @section('content')
 
 
-    <p class="font-bold text-4xl text-emerald-700 text-center mt-5">keuzedelen</p>
+    <p class="font-bold text-4xl text-emerald-700 text-center mt-5">Keuzedelen</p>
     <div class="flex flex-row flex-wrap mt-6 gap-28">
     @foreach ($keuzedelen as $keuzedeel)
     <div class="flex flex-col border border-gray-500 w-96 h-56 ml-10 bg-emerald-50 rounded-lg">

@@ -38,7 +38,7 @@ class LoginorregisterController extends Controller
         $validated = $request->validate([
             'gebruikersnaam' => 'required|string|max:255|unique:gebruikers,gebruikersnaam',
             'password' => 'required|string|min:6',
-            'klas' => 'required|string|size:3',
+            'klas' => 'required|string|size:2',
             'nummer' => 'required|integer|digits:7',
         ]);
 
